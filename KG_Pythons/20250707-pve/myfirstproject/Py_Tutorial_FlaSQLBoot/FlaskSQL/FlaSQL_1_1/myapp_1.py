@@ -1,12 +1,19 @@
 # Flask + SQLite3
 from flask import Flask, render_template, request, redirect, url_for
-import sqlite3
+import sqlite3, os
 
 app = Flask(__name__)
 
-db_path = r'FlaskSQL\FlaSQL_1_1\db\db_test1.db'
-
 def get_db():
+
+    # 현재 스크립트 경로를 기준으로 경로 고정
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    db_path = os.path.join(BASE_DIR, 'db', 'db_test1.db')
+
+    # 폴더 없으면 생성
+    os.makedirs(os.path.dirname(db_path), exist_ok=True)
+
+    # 연결
     conn = sqlite3.connect(db_path)
     return conn
 
