@@ -1,0 +1,40 @@
+<!--Bootstrap 4.5버전 활용한 것-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>직원 정보 양식</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">직원 추가</h1>
+        <form action="{{ url_for('add_employee')}}" method="POST">
+            <div class="form-group">
+                <label for="name">이름</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">이메일</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="position">직책</label>
+                <input type="text" class="form-control" id="position" name="position" required>
+            </div>
+            <div class="form-group">
+                <label for="department">부서</label>
+                <input type="text" class="form-control" id="department" name="department" required>
+            </div>
+            <button type="submit" class="btn btn-primary">저장</button>
+            <butoon type="reset" class="btn btn-secondary">취소</butoon>
+        </form>
+        <a href="{{ url_for('display_employees')}}" class="btn btn-info mt-3">직원 정보 보기</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
