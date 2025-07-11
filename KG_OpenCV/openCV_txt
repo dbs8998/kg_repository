@@ -1,0 +1,82 @@
+✅ OpenCV란?
+**OpenCV (Open Source Computer Vision Library)**는 컴퓨터 비전(영상 처리)과 머신 러닝을 위한 오픈소스 라이브러리야.
+사진이나 영상을 읽고, 처리하고, 변환하고, 분석할 수 있게 도와줘.
+
+프로그래밍 언어: Python, C++, Java 등 지원
+
+무료이자 오픈소스
+
+✅ 주로 하는 일
+이미지 읽기 / 저장
+
+영상에서 얼굴 인식
+
+색상 변환
+
+경계선 검출
+
+객체 추적
+
+카메라 캘리브레이션
+
+머신러닝 (분류/검출)
+
+✅ Python 예제 (초간단)
+아주 간단하게 이미지를 불러서 화면에 띄우는 예제:
+
+import cv2
+
+# 이미지 읽기
+img = cv2.imread('example.jpg')
+
+# 이미지 윈도우에 띄우기
+cv2.imshow('My Image', img)
+
+# 키 입력 대기
+cv2.waitKey(0)
+
+# 윈도우 닫기
+cv2.destroyAllWindows()
+
+
+✅ 영상(비디오) 카메라 열기 예제
+웹캠 켜서 화면 띄우기:
+
+import cv2
+
+cap = cv2.VideoCapture(0)  # 0번 카메라
+
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
+    cv2.imshow('Webcam', frame)
+    if cv2.waitKey(1) == ord('q'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+
+#opencv 참고사이트
+https://www.geeksforgeeks.org/python/getting-started-with-python-opencv/
+
+
+
+
+Example: Python OpenCV Canny Edge Detection
+
+import cv2
+
+FILE_NAME = 'geeks.png'
+
+# Read image from disk.
+img = cv2.imread(FILE_NAME)
+
+# Canny edge detection.
+edges = cv2.Canny(img, 100, 200)
+
+# Write image back to disk.
+cv2.imshow('Edges', edges)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
