@@ -28,7 +28,7 @@ while True:
 
     hsv = cv2.cvtColor(falme, cv2.COLOR_BGR2HSV)
 
-    low = np.array((100,100,100))
+    low = np.array((10,10,10))
     upper = np.array((170,255,255))
 
     mask = cv2.inRange(hsv, low, upper)
@@ -38,5 +38,5 @@ while True:
 
     if cv2.waitKey(1) & 0xff == 27:
         capture.release()
-        cv2.destroyWindow()
+        cv2.destroyAllWindows()
         break
