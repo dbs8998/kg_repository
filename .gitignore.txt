@@ -1,2 +1,5 @@
 #폴더일 경우
 KG_Pythons/20250707-pve/myfirstproject/Lib/
+__pycache__/
+*.pyc
+.DS_Store
