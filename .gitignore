@@ -4,7 +4,7 @@ KG_OpenCV/101/myenv/Lib
 KG_OpenCV/aruco/myenv15/
 KG_OpenCV/OpenCV_102/myenv/
 KG_OpenCV/OpenCV_102_2/myenv/
-KG_OpenCV\OpenCV_102_3/myenv2/
+KG_OpenCV/OpenCV_102_3/myenv2/
 
 __pycache__/
 *.pyc
