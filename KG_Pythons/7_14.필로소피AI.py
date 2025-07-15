@@ -3,7 +3,7 @@ import torch
 from transformers import AutoProcessor, AutoModelForImageTextToText, pipeline
 from PIL import Image
 import io
-import warnings
+import warnings   
 warnings.filterwarnings("ignore")
 
 # 페이지 설정
