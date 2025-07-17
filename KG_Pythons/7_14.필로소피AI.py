@@ -14,7 +14,7 @@ st.set_page_config(
 )
 
 # 제목
-st.title("🏥 [필로소피 AI 교육] MedGemma 의료 이미지 분석기")
+st.title("🏥 [필로소피 AI 교육] MedGemma 의료 이미지 분석기")    
 st.markdown("---")
 
 # CSS 스타일 추가
